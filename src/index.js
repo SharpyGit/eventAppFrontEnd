@@ -32,23 +32,21 @@ ReactDOM.render(
   <Layout className="layout">
     <Header>
       <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
+      <Menu theme="dark" mode="horizontal">
+        <Menu.Item onClick={event =>  window.location.href='/'}>Sign In</Menu.Item>
+        <Menu.Item onClick={event =>  window.location.href='/registration'}>Registration</Menu.Item>
+        <Menu.Item onClick={event =>  window.location.href='/profile'}>Profile</Menu.Item>
+        <Menu.Item onClick={event =>  window.location.href='/Admin'}>Admin</Menu.Item>
       </Menu>
     </Header>
     <Content style={{ padding: '0 50px' }}>
       <Breadcrumb style={{ margin: '16px 0' }}>
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>App</Breadcrumb.Item>
+        <Breadcrumb.Item> Breadcrumb with dynamic page</Breadcrumb.Item>
       </Breadcrumb>
-      <div className="site-layout-content">Content</div>
+      <div className="site-layout-content">{routes()}</div>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+    <Footer style={{ textAlign: 'center' }}>Smashed by the boys</Footer>
   </Layout>
-      {routes()}
    </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import ProfilePage from "./views/profile/ProfilePage";
 import RegistrationPage from "./views/registration/RegistrationPage";
@@ -10,18 +10,22 @@ import reportWebVitals from "./reportWebVitals";
 
 const routes = () => (
   <Router>
-    <Switch>      
-        <Route path="/profile"><ProfilePage /></Route>
-        <Route path="/registration"><RegistrationPage /></Route>
-        <Route path="/"><SignInPage /></Route>
+    <Switch>
+      <Route path="/profile">
+        <ProfilePage />
+      </Route>
+      <Route path="/registration">
+        <RegistrationPage />
+      </Route>
+      <Route path="/">
+        <SignInPage />
+      </Route>
     </Switch>
   </Router>
-)
+);
 
 ReactDOM.render(
-  <React.StrictMode>
-      {routes()}
-   </React.StrictMode>,
+  <React.StrictMode>{routes()}</React.StrictMode>,
   document.getElementById("root")
 );
 

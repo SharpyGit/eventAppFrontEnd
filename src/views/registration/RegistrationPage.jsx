@@ -18,17 +18,10 @@ const RegistrationPage = () => {
     <>
       <h1>Registration page</h1>
       <form onSubmit={handleSubmit}>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" />
-
-        <Input labelText="Last name" type="text" id="lastName" />
-
-        <label for="email">Email address:</label>
-        <input type="email" id="email" name="eamil" />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" />
-
+        <Input labelText="First name: " type="text" id="firstName" />
+        <Input labelText="Last name: " type="text" id="lastName" />
+        <Input labelText="Email address: " type="email" id="email" />
+        <Input labelText="Password: " type="password" id="password" />
         <input type="submit" value="Submit" />
       </form>
     </>

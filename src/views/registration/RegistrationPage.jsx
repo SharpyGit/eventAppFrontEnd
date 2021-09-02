@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import Input from "../../common/Input";
 
 const RegistrationPage = () => {
   const handleSubmit = (e) => {
@@ -19,12 +20,15 @@ const RegistrationPage = () => {
       <form onSubmit={handleSubmit}>
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname" />
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" />
+
+        <Input labelText="Last name" type="text" id="lastName" />
+
         <label for="email">Email address:</label>
         <input type="email" id="email" name="eamil" />
+
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" />
+
         <input type="submit" value="Submit" />
       </form>
     </>

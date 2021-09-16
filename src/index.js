@@ -5,23 +5,27 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProfilePage from "./views/profile/ProfilePage";
 import RegistrationPage from "./views/registration/RegistrationPage";
 import SignInPage from "./views/sign-in/SignInPage";
+import Logo from "../src/common/Logo";
 
 import reportWebVitals from "./reportWebVitals";
 
 const routes = () => (
-  <Router>
-    <Switch>
-      <Route path="/profile">
-        <ProfilePage />
-      </Route>
-      <Route path="/registration">
-        <RegistrationPage />
-      </Route>
-      <Route path="/">
-        <SignInPage />
-      </Route>
-    </Switch>
-  </Router>
+  <>
+    <Logo />
+    <Router>
+      <Switch>
+        <Route path="/profile">
+          <ProfilePage />
+        </Route>
+        <Route path="/registration">
+          <RegistrationPage />
+        </Route>
+        <Route path="/">
+          <SignInPage />
+        </Route>
+      </Switch>
+    </Router>
+  </>
 );
 
 ReactDOM.render(
